@@ -1,10 +1,15 @@
-	<div class="row hide-for-small">
+<?php if ( has_post_thumbnail() ) {  ?>
+  	<div class="row hide-for-small">
 		<div class="large-12 columns">
 			<br />
-			<img src='<?php bloginfo('template_directory'); ?>/img/slide1.jpg' />
+				<?php the_post_thumbnail() ?>
 		</div>
 	</div>
-	<br />
+	
+<?php } ?>
+
+
+
 
 	<?php if ( !is_front_page() ) { ?>
 	  <div class="row">
