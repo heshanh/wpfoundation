@@ -1,4 +1,5 @@
-wpfoundation
+Wordpress Theme using Foundation 4 framework
 ============
 
-Foundation WP theme
+This is a simple wp theme built using Foundation 4 framework. it currently only supports Pages. 
+
