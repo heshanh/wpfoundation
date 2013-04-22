@@ -1,0 +1,4 @@
+wpfoundation
+============
+
+Foundation WP theme
