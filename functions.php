@@ -259,9 +259,10 @@ endif;
 
 
 add_filter('nav_menu_css_class' , 'top_nav_class' , 10 , 2);
-function top_nav_class($classes, $item)
+//add_filter('wp_list_pages' , 'top_nav_class' , 10 , 1);
+function top_nav_class($classes)
 {
-     if( in_array('current-menu-item', $classes) )
+     if( in_array('current_page_item', $classes) )
      {
              $classes[] = 'active ';
      }
@@ -296,6 +297,16 @@ function get_nested_menu()
   return $top_level;
 }
 
+
+function post_have_children($id){
+	$children = get_pages('child_of='.$id);
+	if(count($children) == 0){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
 
 //require('lib/footer_nav.php');
 //require('lib/dropdown-menus.php');
